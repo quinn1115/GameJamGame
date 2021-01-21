@@ -57,6 +57,7 @@ public class PhysicsGrab : MonoBehaviour
 					CurRigidbody = CurrentInteractable.GetComponent<Rigidbody>();
 					CurRigidbody.rotation = Quaternion.Euler(Vector3.zero);
 					CurRigidbody.angularDrag = 2;
+					Debug.Log("Grab hit Gameobject: " + hitInfo.collider.gameObject.name);
 				}
 			}
 		}

@@ -12,16 +12,25 @@ namespace UnityStandardAssets.Effects
 
         private void Start()
         {
-            var systems = GetComponentsInChildren<ParticleSystem>();
-            foreach (ParticleSystem system in systems)
+
+        }
+
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.H))
             {
-				ParticleSystem.MainModule mainModule = system.main;
-				mainModule.startSizeMultiplier *= multiplier;
-                mainModule.startSpeedMultiplier *= multiplier;
-                mainModule.startLifetimeMultiplier *= Mathf.Lerp(multiplier, 1, 0.5f);
-                system.Clear();
-                system.Play();
+                var systems = GetComponentsInChildren<ParticleSystem>();
+                foreach (ParticleSystem system in systems)
+                {
+                    ParticleSystem.MainModule mainModule = system.main;
+                    mainModule.startSizeMultiplier *= multiplier;
+                    mainModule.startSpeedMultiplier *= multiplier;
+                    mainModule.startLifetimeMultiplier *= Mathf.Lerp(multiplier, 1, 0.5f);
+                    system.Clear();
+                    system.Play();
+                }
             }
+
         }
     }
 }
