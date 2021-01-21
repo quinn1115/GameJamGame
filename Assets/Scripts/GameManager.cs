@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     public GameObject keyPref;
-    private Vector3[] hidingspots = new Vector3[11];
+    public Transform[] hidingspots = new Transform[3];
     [SerializeField]
     private GameObject[] preciousObject = new GameObject[9];
-    private List<GameObject> collectables = new List<GameObject>();
-    private List<GameObject> collected = new List<GameObject>();
+    public List<GameObject> collectables = new List<GameObject>();
+    public List<GameObject> collected = new List<GameObject>();
 
     private void Awake()
     {
@@ -42,59 +42,42 @@ public class GameManager : MonoBehaviour
 
     void DrawRandom()
     {
-        for(int i = 0; i < collectables.Count; i++)
+        for (int i = 0; i < collectables.Count; i++)
         {
             int rnd = Random.Range(0, preciousObject.Length);
             while (collectables.Contains(preciousObject[rnd]))
             {
                 rnd = Random.Range(0, preciousObject.Length);
             }
-            collectables.Add(preciousObject[rnd]);
+            collectables[i] = preciousObject[rnd];
             print(preciousObject[rnd]);
         }
 
+        GameObject keyClone = Instantiate(keyPref);
+        keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)].position;
+    }
 
-        //GameObject keyClone = Instantiate(keyPref);
-        //keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)];
-
-        //for (int i = 0; i < collectables.Length; i++)
-        //{
-        //    int rnd = Random.Range(0, preciousObject.Length);
-        //    //print(rnd);
-
-        //    for(int c = 0; c < collectables.Length; c++)
-        //    {
-        //        if (preciousObject[rnd] == collectables[c])
-        //        {
-        //            i--;
-        //            print("dubbel");
-        //            //print(preciousObject[rnd]);
-        //            //print(collectables[c]);
-        //        }
-        //        else
-        //        {
-        //            collectables[i] = preciousObject[rnd];
-        //        }
-        //    }
-        //}
-
-
-        //list = new List<int>(new int[Lenght]);
-
-        //for (int j = 1; j < Lenght; j++)
-        //{
-        //    Rand = Random.Range(1, 6);
-
-        //    while (list.Contains(Rand))
-        //    {
-        //        Rand = Random.Range(1, 6);
-        //    }
-
-        //    list[j] = Rand;
-        //    print(list[j]);
-        //}
-
-
+    private void OnTriggerEnter(Collider other)
+    {
+        int collectedItems = 0;
+        for(int C = 0; C < collected.Count; C++)
+        {
+            for (int L = 0; L < collectables.Count; L++)
+            {
+                if (collected[C] == collectables[L])
+                {
+                    collectedItems++;   
+                }
+            }
+        }
+        if(collectedItems == collectables.Count)
+        {
+            print("You won/nxt lvl");
+        }
+        else
+        {
+            print("Zoek verder");
+        }
     }
 
 
