@@ -1236,21 +1236,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b8222bb67ac496fb47cdb1143cedc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyPref: {fileID: 0}
-  hidingspots:
-  - {x: 0.00012820086, y: 4.5888e-41, z: 0}
-  - {x: 0, y: 1.0561908e-15, z: 1e-45}
-  - {x: 4.6e-44, y: 4.5888e-41, z: 0.00012820086}
-  - {x: 4.5888e-41, y: 0.00012820133, z: 4.5888e-41}
+  keyPref: {fileID: 103217694812441318, guid: 043ced53345a141f5a3c512790df17f1, type: 3}
   preciousObject:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  collectables:
-  - {fileID: 0}
-  - {fileID: 0}
-  collected: []
+  - {fileID: 183645733197128885, guid: 3ba3c341a683e42bc92411b5337c31df, type: 3}
+  - {fileID: 7529464091019013078, guid: 2b9e0b174a1ad4036a482ae5eb6d927f, type: 3}
+  - {fileID: 6521726488064428115, guid: 99c0db86fe9ce459aa1a6ea3d925b2b3, type: 3}
+  - {fileID: 5424092527094974805, guid: 1cb3401b65ba949b5a2c0641bee61f50, type: 3}
+  - {fileID: 5424092527094974805, guid: 397ddbdd7beb14e3ca91753f94450693, type: 3}
+  - {fileID: 5424092527094974805, guid: feebd42fe11d94394a982aa9c7cb01d5, type: 3}
+  - {fileID: 5424092527094974805, guid: 2f9e648bccf9545d8a2e66ac8b2a660a, type: 3}
+  - {fileID: 5424092527094974805, guid: 8500742991d1441e384857bf725efa24, type: 3}
+  - {fileID: 5424092527094974805, guid: 81bf4861693e64ee8a7780a42de749d8, type: 3}
 --- !u!4 &1273685952
 Transform:
   m_ObjectHideFlags: 0
