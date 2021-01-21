@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private GameObject[] preciousObject = new GameObject[9];
     public List<GameObject> collectables = new List<GameObject>();
     public List<GameObject> collected = new List<GameObject>();
+    float timeLeft = 10;
+
 
     private void Awake()
     {
@@ -30,6 +32,9 @@ public class GameManager : MonoBehaviour
         {
             collectables.Add(null);
         }
+
+
+
     }
 
     private void Update()
@@ -37,8 +42,17 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             DrawRandom();
+            timeLeft = Time.time + 60f;
         }
+        if (Time.time > timeLeft)
+        {
+            Debug.Log("GameOver, You went up in to flames");
+        }
+
     }
+
+
+
 
     void DrawRandom()
     {
@@ -56,6 +70,7 @@ public class GameManager : MonoBehaviour
         GameObject keyClone = Instantiate(keyPref);
         keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)].position;
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
