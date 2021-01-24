@@ -50,10 +50,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
-
-
-
     void DrawRandom()
     {
         for (int i = 0; i < collectables.Count; i++)
@@ -95,5 +91,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public float GetTimeLeft()
+    {
+        return timeLeft - Time.time;
+    }
 }
