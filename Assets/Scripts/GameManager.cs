@@ -39,14 +39,13 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-           // DrawRandom();
+            DrawRandom();
             timeLeft = Time.time + 60f;
         }
         if (GetTimeLeft() <= 0f)
         {
 			Debug.Log("GameOver, You went up in to flames");
-			timeLeft = Time.time + 60f;
-			SceneManager.LoadScene("LoseScreen");		
+			TransitionManager.instance.LoadScene("LoseScreen");
         }
     }
     void DrawRandom()

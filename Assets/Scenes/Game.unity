@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b8222bb67ac496fb47cdb1143cedc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyPref: {fileID: 0}
+  keyPref: {fileID: 8073624774204982509}
   hidingspots:
   - {fileID: 1773233489}
   - {fileID: 458878724}
@@ -162,10 +162,6 @@ MonoBehaviour:
   - {fileID: 8073624773462807167}
   - {fileID: 8073624774041319130}
   - {fileID: 8073624773949191453}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   collectables: []
   collected: []
 --- !u!4 &3008407
@@ -965,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 2559483359599605356, guid: c06c26742a0152a4fa63baf2d9eb25ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2559483359599605356, guid: c06c26742a0152a4fa63baf2d9eb25ae,
         type: 3}
@@ -5286,7 +5282,7 @@ Transform:
   - {fileID: 87200271}
   - {fileID: 797906316}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1163649177
 Mesh:
