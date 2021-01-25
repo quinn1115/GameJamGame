@@ -32,11 +32,7 @@ public class GameManager : MonoBehaviour
         {
             collectables.Add(null);
         }
-
-
-
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -44,11 +40,10 @@ public class GameManager : MonoBehaviour
             DrawRandom();
             timeLeft = Time.time + 60f;
         }
-        if (Time.time > timeLeft)
+        if (GetTimeLeft() <= 0f)
         {
             Debug.Log("GameOver, You went up in to flames");
         }
-
     }
     void DrawRandom()
     {
@@ -66,7 +61,6 @@ public class GameManager : MonoBehaviour
         GameObject keyClone = Instantiate(keyPref);
         keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)].position;
     }
-
 
     private void OnTriggerEnter(Collider other)
     {

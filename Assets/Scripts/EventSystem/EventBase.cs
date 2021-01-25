@@ -5,7 +5,8 @@ using UnityEngine;
 public class EventBase : MonoBehaviour
 {
 
-	private bool m_EventStarted;
+	[HideInInspector]
+	public float m_UpdateTimerTime;
 
 	public bool IsStarted() { return m_EventStarted; }
 
@@ -20,16 +21,19 @@ public class EventBase : MonoBehaviour
 	
 	public virtual void EventStart()
 	{
-		Debug.Log("Event Started");
-		m_EventStarted = true;
+		StartCoroutine(UpdateTimer());
 	}
 
 	public virtual void EventStop()
-	{
-		Debug.Log("Event Stopped");
-		m_EventStarted = false;
-	}
+	{}
 
 	public virtual void EventUpdate()
 	{}
+
+	IEnumerator UpdateTimer()
+	{
+		yield return new WaitForSeconds(m_UpdateTimerTime);
+		EventUpdate();
+		StartCoroutine(UpdateTimer());
+	}
 }
