@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject keyPref;
     public Transform[] hidingspots = new Transform[3];
-    [SerializeField]
-    private GameObject[] preciousObject = new GameObject[9];
+	[SerializeField]
+	private GameObject[] preciousObject = new GameObject[9];
     public List<GameObject> collectables = new List<GameObject>();
     public List<GameObject> collected = new List<GameObject>();
 	private float timeLeft;
@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
                 rnd = Random.Range(0, preciousObject.Length);
             }
             collectables[i] = preciousObject[rnd];
-            print(preciousObject[rnd]);
+			collectables[i].layer = 10;
+			print(preciousObject[rnd]);
         }
 
         GameObject keyClone = Instantiate(keyPref);
