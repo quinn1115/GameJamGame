@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     private GameObject[] preciousObject = new GameObject[9];
     public List<GameObject> collectables = new List<GameObject>();
     public List<GameObject> collected = new List<GameObject>();
-    float timeLeft = 10;
+	private float timeLeft;
 
 
     private void Awake()
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+		timeLeft = 60;
         for (int i = 0; i < 4; i++)
         {
             collectables.Add(null);
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
         if (GetTimeLeft() <= 0f)
         {
             Debug.Log("GameOver, You went up in to flames");
+			//SceneManager.LoadScene("MainMenu");
         }
     }
     void DrawRandom()
