@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-		timeLeft = 60;
-        for (int i = 0; i < 4; i++)
+		timeLeft = Time.time + 60f;
+		for (int i = 0; i < 4; i++)
         {
             collectables.Add(null);
         }
@@ -39,13 +39,14 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            DrawRandom();
+           // DrawRandom();
             timeLeft = Time.time + 60f;
         }
         if (GetTimeLeft() <= 0f)
         {
-            Debug.Log("GameOver, You went up in to flames");
-			//SceneManager.LoadScene("MainMenu");
+			Debug.Log("GameOver, You went up in to flames");
+			timeLeft = Time.time + 60f;
+			SceneManager.LoadScene("LoseScreen");		
         }
     }
     void DrawRandom()

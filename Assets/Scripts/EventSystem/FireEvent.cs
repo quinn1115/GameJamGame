@@ -51,12 +51,12 @@ public class FireEvent : EventBase
 		}
 		else
 		{
-			chromaticAberration.intensity.value += 0.25f;
-			colorGrading.brightness.value -= 5f;
+			chromaticAberration.intensity.value += 0.5f;
+			colorGrading.brightness.value -= 20f;
 			colorGrading.brightness.value = Mathf.Clamp(colorGrading.brightness.value, -40, 0);
-			bloom.intensity.value += 1f;
+			bloom.intensity.value += 2f;
 			bloom.intensity.value = Mathf.Clamp(bloom.intensity.value, 2, 10);
-			lensDistortion.intensity.value += 5;
+			lensDistortion.intensity.value += 15;
 			lensDistortion.intensity.value = Mathf.Clamp(lensDistortion.intensity.value, 0, 20);
 		}
 		
