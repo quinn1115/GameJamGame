@@ -7,16 +7,18 @@ public class EventBase : MonoBehaviour
 
 	[HideInInspector]
 	public float m_UpdateTimerTime;
+	bool m_EventStarted;
 
 	public bool IsStarted() { return m_EventStarted; }
 
-	// Update is called once per frame
-	void Update()
+    private void Start()
+    {
+		m_EventStarted = true;
+    }
+
+    // Update is called once per frame
+    void Update()
 	{
-		if (m_EventStarted)
-		{
-			EventUpdate();
-		}
 	}		
 	
 	public virtual void EventStart()
@@ -25,7 +27,9 @@ public class EventBase : MonoBehaviour
 	}
 
 	public virtual void EventStop()
-	{}
+	{
+		m_EventStarted = false;
+	}
 
 	public virtual void EventUpdate()
 	{}
