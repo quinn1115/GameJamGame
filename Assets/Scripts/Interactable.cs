@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.5f;
+        audioSource.spatialBlend = 1.0f;
         clip = c;
     }
 
