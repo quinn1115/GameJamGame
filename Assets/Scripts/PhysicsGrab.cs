@@ -54,11 +54,13 @@ public class PhysicsGrab : MonoBehaviour
 				if (hitInfo.collider.gameObject.tag == "Interactable")
 				{
 					CurrentInteractable = hitInfo.collider.gameObject;
-					CurRigidbody = CurrentInteractable.GetComponent<Rigidbody>();
+					CurRigidbody = CurrentInteractable.GetComponent<Rigidbody>();					
 					CurRigidbody.rotation = Quaternion.Euler(Vector3.zero);
 					CurRigidbody.angularDrag = 2;
-					CurRigidbody.constraints = RigidbodyConstraints.None;
 					Debug.Log("Grab hit Gameobject: " + hitInfo.collider.gameObject.name);
+
+					if(hitInfo.collider.gameObject.GetComponent<LockedDoor>() == null)
+						CurRigidbody.constraints = RigidbodyConstraints.None;
 				}
 			}
 		}

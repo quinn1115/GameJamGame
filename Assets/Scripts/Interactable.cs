@@ -7,8 +7,8 @@ public class Interactable : MonoBehaviour
     public float soundCooldown = 0.5f;
     public float soundCooldownMax = 0.5f;
 
-    AudioSource audioSource;
-    AudioClip clip;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip clip;
 
     public void Setup(AudioClip c)
     {
@@ -18,14 +18,14 @@ public class Interactable : MonoBehaviour
         clip = c;
     }
 
-    private void Update()
+    protected void Update()
     {
         soundCooldown -= Time.deltaTime;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected void OnCollisionEnter(Collision collision)
     {
-        if (soundCooldown <= 0)
+        if (soundCooldown <= 0 && clip != null)
         {
             audioSource.PlayOneShot(clip);
             soundCooldown = soundCooldownMax;

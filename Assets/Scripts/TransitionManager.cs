@@ -9,6 +9,7 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private Animator anim;
 
     string targetScene;
+    bool isLoading = false;
 
     private void Awake()
     {
@@ -31,13 +32,21 @@ public class TransitionManager : MonoBehaviour
 
     public void LoadScene(string a_targetScene)
     {
-        targetScene = a_targetScene;
-        anim.SetTrigger("TransitionIn");
+        if(!isLoading)
+        {
+            targetScene = a_targetScene;
+            anim.SetTrigger("TransitionIn");
+            isLoading = true;
+        }
     }
 
+    /// <summary>
+    /// Used by animation event
+    /// </summary>
     private void Load()
     {
         SceneManager.LoadSceneAsync(targetScene);
+        isLoading = false;
     }
 
     private void TransitionOut(Scene scene, LoadSceneMode loadSceneMode)

@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject keyPref;
     public Transform[] hidingspots = new Transform[3];
-	[SerializeField]
-	private GameObject[] preciousObject = new GameObject[9];
-    public List<GameObject> collectables = new List<GameObject>();
-    public List<GameObject> collected = new List<GameObject>();
+	[SerializeField] private GameObject[] preciousObject = new GameObject[9]; // objects to spawn
+    public List<GameObject> collectables = new List<GameObject>(); // object that has spawned
+    public List<GameObject> collected = new List<GameObject>(); // objects in player inventory?
 	private float timeLeft;
 
+    [SerializeField] int collectedItems = 0;
 
     private void Awake()
     {
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
         {
             collectables.Add(null);
         }
+
+        DrawRandom();
     }
     private void Update()
     {
@@ -63,12 +65,21 @@ public class GameManager : MonoBehaviour
         }
 
         GameObject keyClone = Instantiate(keyPref);
+        keyPref.name = "Key";
         keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)].position;
+    }
+
+    public void CollectedItem()
+    {
+        collectedItems++;
+        timeLeft += 10;
+
+        if (collectedItems >= collectables.Count)
+            TransitionManager.instance.LoadScene("WinScreen");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        int collectedItems = 0;
         for(int C = 0; C < collected.Count; C++)
         {
             for (int L = 0; L < collectables.Count; L++)
