@@ -64,6 +64,18 @@ public class GameManager : MonoBehaviour
 			print(preciousObject[rnd]);
         }
 
+		if (hidingspots.Length >= collectables.Count)
+		{
+			for (int i = 0; i < collectables.Count; i++)
+			{
+				Instantiate(collectables[i], hidingspots[i].transform.position, Quaternion.identity, this.transform);
+			}
+		}
+		else
+		{
+			Debug.LogError("WARNING: There are less hiding spots than collectable items");
+		}
+
         GameObject keyClone = Instantiate(keyPref);
         keyPref.name = "Key";
         keyClone.transform.position = hidingspots[Random.Range(0, hidingspots.Length)].position;
