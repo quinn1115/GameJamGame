@@ -15,11 +15,6 @@ public class ButtonChangeScene : ButtonCollider
     }
     protected override void OnClick()
     {
-        anim.SetTrigger("TransitionOn");
-    }
-
-    public void LoadScene()
-    {
-        SceneManager.LoadSceneAsync(sceneName);
+        TransitionManager.instance.LoadScene(sceneName);
     }
 }

@@ -57,6 +57,7 @@ public class PhysicsGrab : MonoBehaviour
 					CurRigidbody = CurrentInteractable.GetComponent<Rigidbody>();
 					CurRigidbody.rotation = Quaternion.Euler(Vector3.zero);
 					CurRigidbody.angularDrag = 2;
+					CurRigidbody.constraints = RigidbodyConstraints.None;
 					Debug.Log("Grab hit Gameobject: " + hitInfo.collider.gameObject.name);
 				}
 			}
@@ -65,7 +66,7 @@ public class PhysicsGrab : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (CurrentInteractable)
+		if (CurrentInteractable && CurrentInteractable.GetComponent<Rigidbody>() != null)
 		{
 			CurrentInteractable.GetComponent<Rigidbody>().velocity = (m_GrabPos.transform.position - CurrentInteractable.transform.position) * m_Speed;
 		}
