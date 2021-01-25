@@ -7,6 +7,8 @@ public class EventBase : MonoBehaviour
 
 	private bool m_EventStarted;
 
+	public bool IsStarted() { return m_EventStarted; }
+
 	// Update is called once per frame
 	void Update()
 	{
