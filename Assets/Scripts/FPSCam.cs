@@ -37,20 +37,6 @@ public class FPSCam : MonoBehaviour
         {
             rb.AddForce(transform.up * jumpForce * 10, ForceMode.Impulse);
         }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Debug.DrawRay(head.transform.position, head.transform.forward * 100, Color.red, 0.1f);
-            Shoot();
-        }
-    }
-
-    void Shoot()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(head.transform.position, head.transform.forward, out hit, 100, mask))
-        {
-            print(hit.transform.gameObject);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
