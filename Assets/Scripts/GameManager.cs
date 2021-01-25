@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 		timeLeft = Time.time + 60f;
-		for (int i = 0; i < 4; i++)
-        {
-            collectables.Add(null);
-        }
+		//for (int i = 0; i < preciousObject.Length; i++)
+  //      {
+  //          collectables.Add(null);
+  //      }
 
         DrawRandom();
     }
@@ -52,16 +52,20 @@ public class GameManager : MonoBehaviour
     }
     void DrawRandom()
     {
-        for (int i = 0; i < collectables.Count; i++)
+        for (int i = 0; i < preciousObject.Length; i++)
         {
             int rnd = Random.Range(0, preciousObject.Length);
             while (collectables.Contains(preciousObject[rnd]))
             {
                 rnd = Random.Range(0, preciousObject.Length);
             }
-            collectables[i] = preciousObject[rnd];
-			collectables[i].layer = 10;
+            collectables.Add(preciousObject[i]);
 			print(preciousObject[rnd]);
+        }
+
+        for (int i = 0; i < collectables.Count; i++)
+        {
+            collectables[i].layer = 10;
         }
 
 		if (hidingspots.Length >= collectables.Count)

@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 2559483359599605356, guid: c06c26742a0152a4fa63baf2d9eb25ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2559483359599605356, guid: c06c26742a0152a4fa63baf2d9eb25ae,
         type: 3}
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a342a3d0872ef4ab6dbb478f549ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FrikandelPrefab: {fileID: 103217694812441318, guid: 043ced53345a141f5a3c512790df17f1,
+  FrikandelPrefab: {fileID: 7086861783603816230, guid: f8cecbbaac9947740b6e7ad7fa75faf6,
     type: 3}
 --- !u!4 &436146599
 Transform:
@@ -1596,7 +1596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &447093365
 Mesh:
@@ -4459,7 +4459,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5146,65 +5146,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168169275}
   m_CullTransparentMesh: 0
---- !u!1 &1288403636
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1288403638}
-  - component: {fileID: 1288403637}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1288403637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288403636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c777aa46439e0e7408eae8f095a18983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: 4bb9e0de5925c2e4da9f48583c1af6c2, type: 3}
-  - {fileID: 8300000, guid: 17a662b311025074ab9fd625953179a5, type: 3}
-  - {fileID: 8300000, guid: b27e81e7e6aa10249899d539a91c5ebf, type: 3}
-  - {fileID: 8300000, guid: 6a0803b5e77f9ee42910cc31815dbfb1, type: 3}
-  - {fileID: 8300000, guid: 941d9c471683fc440a5bd7a8e635c004, type: 3}
-  - {fileID: 8300000, guid: 0c8a0cb005793b24682297561ea302d7, type: 3}
-  - {fileID: 8300000, guid: 2e5e6f8f81669e34495584ef8df5ced4, type: 3}
-  - {fileID: 8300000, guid: 7b690f5cafe2a4f41b40a829c7508345, type: 3}
-  - {fileID: 8300000, guid: b491e73696ca8154db341a99059334c9, type: 3}
-  - {fileID: 8300000, guid: 1cb23c96edd951b4eaeb7e086c26bd56, type: 3}
-  - {fileID: 8300000, guid: 45d4dac483cbd30459c72c7a4a00563e, type: 3}
-  - {fileID: 8300000, guid: c92bcd8002c2ac945a5cf13492ede089, type: 3}
-  - {fileID: 8300000, guid: 596367204d1f1d3428b5cb01fa950163, type: 3}
-  - {fileID: 8300000, guid: e0ec803596b33fa488a8772e3c9413a0, type: 3}
-  - {fileID: 8300000, guid: 64b4d2f205e43d7498fec6486c7db286, type: 3}
---- !u!4 &1288403638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288403636}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.872495, y: 3.8488026, z: -1.7557657}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1311085182
 Mesh:
   m_ObjectHideFlags: 0
@@ -6070,7 +6011,7 @@ PrefabInstance:
     - target: {fileID: 646500442029791481, guid: 300a9b6ea8516a441894abd1888be32c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 646500442029791481, guid: 300a9b6ea8516a441894abd1888be32c,
         type: 3}
@@ -6125,7 +6066,7 @@ PrefabInstance:
     - target: {fileID: 646500442029791483, guid: 300a9b6ea8516a441894abd1888be32c,
         type: 3}
       propertyPath: m_Name
-      value: SoundManager (1)
+      value: SoundManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 300a9b6ea8516a441894abd1888be32c, type: 3}

@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
     public float soundCooldown = 0.5f;
     public float soundCooldownMax = 0.5f;
+    public bool isPrecious;
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clip;
