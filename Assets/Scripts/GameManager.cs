@@ -52,14 +52,14 @@ public class GameManager : MonoBehaviour
     }
     void DrawRandom()
     {
-        for (int i = 0; i < preciousObject.Length; i++)
+        for (int i = 0; i < 4; i++)
         {
             int rnd = Random.Range(0, preciousObject.Length);
             while (collectables.Contains(preciousObject[rnd]))
             {
                 rnd = Random.Range(0, preciousObject.Length);
             }
-            collectables.Add(preciousObject[i]);
+            collectables.Add(preciousObject[rnd]);
 			print(preciousObject[rnd]);
         }
 

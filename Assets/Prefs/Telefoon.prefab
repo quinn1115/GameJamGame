@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &694342352669884634
+--- !u!1 &6898640194387685994
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5627490629409694048}
-  - component: {fileID: 4098587759326942395}
-  - component: {fileID: 1118073543306823227}
+  - component: {fileID: 5992306682559952182}
+  - component: {fileID: 2707329469807107344}
+  - component: {fileID: 3300648788018016218}
+  - component: {fileID: 3311176227357006801}
+  - component: {fileID: -6776204038543555735}
+  - component: {fileID: 4690137512545974334}
+  - component: {fileID: 2010055687298813488}
   m_Layer: 10
-  m_Name: pCube3
+  m_Name: Telefoon
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5627490629409694048
+--- !u!4 &5992306682559952182
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694342352669884634}
+  m_GameObject: {fileID: 6898640194387685994}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1751503988864699713}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4098587759326942395
+--- !u!33 &2707329469807107344
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694342352669884634}
-  m_Mesh: {fileID: 3369316746193770658, guid: 90505010d7bc148439874892b29514fa, type: 3}
---- !u!23 &1118073543306823227
+  m_GameObject: {fileID: 6898640194387685994}
+  m_Mesh: {fileID: 8421744311104621043, guid: f9240cb80d2327e4e97cca911c893fd1, type: 3}
+--- !u!23 &3300648788018016218
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694342352669884634}
+  m_GameObject: {fileID: 6898640194387685994}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7596d79f07f5a4179908c98fe490c447, type: 2}
+  - {fileID: 2100000, guid: 7a4403a97a50f415e851fd3db0e27659, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,48 +83,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1370579956916393979
-GameObject:
+--- !u!65 &3311176227357006801
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1751503988864699713}
-  - component: {fileID: 2289006069405039221}
-  - component: {fileID: 2289006069405039220}
-  - component: {fileID: 6405014705555954597}
-  - component: {fileID: -1983139681067024665}
-  m_Layer: 10
-  m_Name: Boek_model_
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1751503988864699713
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370579956916393979}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -6.429, y: 1.749, z: 5.851}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5627490629409694048}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!54 &2289006069405039221
+  m_GameObject: {fileID: 6898640194387685994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.113494255, y: 0.0063320505, z: 0.061060853}
+  m_Center: {x: -0.00022642687, y: 0.007577125, z: 0.014258526}
+--- !u!54 &-6776204038543555735
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370579956916393979}
+  m_GameObject: {fileID: 6898640194387685994}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -130,26 +112,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2289006069405039220
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370579956916393979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.3741579, y: 0.07508755, z: 0.4799378}
-  m_Center: {x: 0, y: 0.049999997, z: -0.0031468868}
---- !u!82 &6405014705555954597
+--- !u!82 &4690137512545974334
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370579956916393979}
+  m_GameObject: {fileID: 6898640194387685994}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -239,13 +208,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-1983139681067024665
+--- !u!114 &2010055687298813488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370579956916393979}
+  m_GameObject: {fileID: 6898640194387685994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a7ef27464adfc646909a1171c10f9af, type: 3}
