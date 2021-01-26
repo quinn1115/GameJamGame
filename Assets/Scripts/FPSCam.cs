@@ -25,10 +25,12 @@ public class FPSCam : MonoBehaviour
 
 	private void Update()
 	{
-		float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+		float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime * 100;
 		xRotation -= mouseY;
 		xRotation = Mathf.Clamp(xRotation, -90f, 65f);
 		head.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+		float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime * 100;
+		transform.Rotate(new Vector3(0, mouseX, 0));
 		if (Input.GetKeyDown("space") && CheckGrounded())
 		{
 			Debug.Log(CheckGrounded());
@@ -38,7 +40,6 @@ public class FPSCam : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0)));
 		rb.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * moveSpeed / 100) + (transform.right * Input.GetAxis("Horizontal") * moveSpeed / 100));
 	}
 
